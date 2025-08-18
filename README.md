@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 <!--
-**Mostafa10Oulahyan/Mostafa10Oulahyan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Mostafa Oulahyan/Mostafa10Oulahyan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
