@@ -1,12 +1,12 @@
 
-Hello and welcome to my profile!
+## Hello and Welcome to my Profile!
 
-### About Me
+### 🧑‍💻 About Me
 
 * I am currently a Digital Development student at ISTA NTIC Tangier (OFPPT), passionate about creating modern, high-performance web applications.
 * I have a versatile Full Stack Developer profile with strong skills across both front-end and back-end technologies.
 
-### Technical Skills
+### 💻 Technical Skills
 
 * **Front-End:**
     * JavaScript (ES6+)
@@ -28,12 +28,12 @@ Hello and welcome to my profile!
     * Git, GitHub, GitLab
     * Visual Studio Code
 
-### Objective
+### 🎯 Objective
 
 * I am actively looking for a 1-month internship (mandatory) in Tangier.
 * I am eager to apply my skills in Laravel and React while contributing effectively to your projects.
 
-### Contact
+### 📧 Contact
 
 * ✉️ **Email:** mostafaouhalyan@gmail.com
 * 📍 **Location:** Tangier, Morocco
