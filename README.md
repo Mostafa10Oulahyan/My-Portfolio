@@ -1,4 +1,3 @@
-## 👋 Hi there!
 
 Hello and welcome to my profile!
 
@@ -29,22 +28,10 @@ Hello and welcome to my profile!
     * Git, GitHub, GitLab
     * Visual Studio Code
 
----
-
 ### Objective
 
 * I am actively looking for a 1-month internship (mandatory) in Tangier.
 * I am eager to apply my skills in Laravel and React while contributing effectively to your projects.
-
-### Here are some ideas to get you started:
-
-* 🌱 I’m currently working on ...
-* 👯 I’m looking to collaborate on ...
-* 🤝 I’m looking for help with ...
-* ❓ Ask me about ...
-* 📫 How to reach me: ...
-* 😄 Pronouns: ...
-* ⚡ Fun fact: ...
 
 ### Contact
 
