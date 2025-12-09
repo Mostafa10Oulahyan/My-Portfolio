@@ -1,0 +1,67 @@
+# .gitlab-ci.yml
+
+# تحديد مراحل (Stages) البايبلاين
+stages:
+  - deploy
+
+# 1. نشر المشروع على GitLab Pages (Job: pages)
+# هذه هي الوظيفة القياسية لنشر المواقع الثابتة عبر GitLab Pages
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Starting GitLab Pages deployment..."
+    # نقل الملفات المطلوبة للنشر إلى مجلد 'public' ليتم نشره
+    # بما أن مشروعك موجود فعلياً في 'public'، سننقله إلى مجلد 'pages' المؤقت
+    - mkdir .public
+    - cp -r public/* .public
+    - rm -rf public
+    - mv .public public # يجب أن يكون المجلد الناتج اسمه 'public'
+    - echo "GitLab Pages artifacts created successfully."
+  artifacts:
+    paths:
+      - public # تحديد مجلد 'public' كـ artifact للنشر
+  only:
+    - main # تشغيل هذه الوظيفة فقط عند الدفع (Push) إلى فرع main
+
+# ---
+# 2. نشر المشروع على GitHub Pages (Job: deploy_to_github)
+# ---
+
+deploy_to_github:
+  stage: deploy
+  image: alpine:latest
+  
+  # لا تشغل هذا إلا بعد نجاح الـ Job الخاص بـ GitLab Pages
+  needs: ["pages"] 
+  
+  before_script:
+    # تثبيت Git وتشغيل الإعدادات اللازمة
+    - apk add --no-cache git
+    - git config --global user.email "mostaphaoulahyan@example.com" # 🚨 بَدّل هذا
+    - git config --global user.name "Mostafa10Oulahyan" # 🚨 بَدّل هذا
+    
+  script:
+    - echo "Starting mirroring process to GitHub..."
+
+    # 1. استنساخ المستودع (Clone) من GitHub باستخدام الـ Token
+    # $GITHUB_TOKEN يجب أن يكون متغير CI/CD في إعدادات GitLab
+    # 🚨 بَدّل اسم المستخدم واسم المستودع (RPS-Game)
+    - git clone --branch main https://oauth2:${GITHUB_TOKEN}@github.com//Mostafa10Oulahyan/Mostafa10Oulahyan.git repo-gh
+    # 2. حذف المحتوى القديم من المجلد المستنسخ
+    - rm -rf repo-gh/* # 3. نسخ ملفات المشروع الثابتة من مجلد 'public' إلى المجلد المستنسخ
+    - cp -r public/* repo-gh/
+    
+    # 4. الانتقال إلى المجلد والقيام بعملية Commit و Push
+    - cd repo-gh
+    - git add .
+    - git commit -m "Deployment via GitLab CI/CD" || echo "No changes to commit" # إذا لم تكن هناك تغييرات، لا تفشل المهمة
+    - git push origin main # Push إلى الفرع 'main' (الذي يعمل كـ GitHub Pages)
+
+    - echo "Successfully mirrored and deployed to GitHub Pages!"
+    
+  # تشغيل هذه الوظيفة فقط عند الدفع (Push) إلى فرع main
+  only:
+    - main
+  except:
+    - merge_requests # لا تعمل عند دمج طلبات السحب
