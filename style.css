@@ -469,3 +469,285 @@ body {
   transform: translateX(-50%) scale(1);
   top: -1.8rem;
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    height: auto;
+    min-height: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 1rem;
+    perspective: none;
+  }
+
+  .book {
+    flex-direction: column;
+    display: block;
+  }
+
+  .book .book-page {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+  }
+
+  .book-page.page-left {
+    display: block;
+  }
+
+  .book-page.page-right {
+    position: relative !important;
+    transform: none !important;
+    display: block;
+  }
+
+  .book-page.page-right.turn {
+    transform: none !important;
+  }
+
+  .page-front,
+  .page-back {
+    position: relative !important;
+    transform: none !important;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .cover {
+    display: none;
+  }
+
+  .nextprev-btn {
+    display: none;
+  }
+
+  .back-profile {
+    position: relative;
+    display: inline-flex;
+    margin-top: 1rem;
+    bottom: auto;
+    right: auto;
+  }
+
+  .profile-page img {
+    max-width: 150px;
+  }
+
+  .profile-page h1 {
+    font-size: 2rem;
+  }
+
+  .profile-page h3 {
+    font-size: 1.2rem;
+  }
+
+  .profile-page p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .workeduc-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .workeduc-content p {
+    font-size: 1rem;
+  }
+
+  .services-box {
+    gap: 1rem;
+  }
+
+  .services-content {
+    flex: 1 1 100%;
+  }
+
+  .skills-box {
+    gap: 1rem;
+  }
+
+  .skills-content {
+    flex: 1 1 100%;
+  }
+
+  .skills-content .content span {
+    width: 4rem;
+    height: 3.5rem;
+    font-size: 0.7rem;
+  }
+
+  .skills-content .content span i {
+    font-size: 1.8rem;
+  }
+
+  .skills-content .content span img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .portfolio-box .img-box {
+    height: 12rem;
+  }
+
+  .portfolio-box .info-box .info-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .portfolio-box .btn-box {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .portfolio-box .btn-box .btn {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-box .field {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .contact-box textarea {
+    height: 12rem;
+  }
+
+  .nextprev-btn {
+    bottom: 0.5rem;
+    right: 1rem;
+  }
+
+  .nextprev-btn.back {
+    left: 1rem;
+  }
+
+  .number-page {
+    bottom: 0.5rem;
+  }
+
+  .back-profile {
+    bottom: 0.8rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0.5rem;
+  }
+
+  .book .book-page {
+    padding: 1rem;
+  }
+
+  .profile-page img {
+    max-width: 120px;
+  }
+
+  .profile-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-page h3 {
+    font-size: 1rem;
+  }
+
+  .profile-page .social-media a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .profile-page p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 7rem;
+    height: 2.2rem;
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .workeduc-content h3 {
+    font-size: 1rem;
+  }
+
+  .workeduc-content p,
+  .services-content p,
+  .portfolio-box .info-box p {
+    font-size: 0.9rem;
+  }
+
+  .services-content h3 {
+    font-size: 1rem;
+  }
+
+  .skills-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-content .content {
+    gap: 0.5rem;
+  }
+
+  .skills-content .content span {
+    width: 3.5rem;
+    height: 3.2rem;
+    font-size: 0.65rem;
+  }
+
+  .skills-content .content span i {
+    font-size: 1.5rem;
+  }
+
+  .skills-content .content span img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .portfolio-box .img-box {
+    height: 10rem;
+  }
+
+  .contact-box .field {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-box textarea {
+    height: 10rem;
+  }
+}
