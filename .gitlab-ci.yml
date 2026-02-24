@@ -23,13 +23,13 @@ deploy_to_github:
   needs: ["pages"]
   before_script:
     - apk add --no-cache git
-    - git config --global user.email "mostaphaoulahyan@example.com"
+    - git config --global user.email "mostaphaoulahyan@gmail.com"
     - git config --global user.name "Mostafa10Oulahyan"
   script:
     - echo "Starting mirroring process to GitHub..."
     - npm ci
     - npm run build
-    - git clone --branch main https://oauth2:${GITHUB_TOKEN}@github.com//Mostafa10Oulahyan/Mostafa10Oulahyan.git repo-gh
+    - git clone --branch main https://oauth2:${GITHUB_TOKEN}@github.com/Mostafa10Oulahyan/My-Portfolio.git repo-gh
     - rm -rf repo-gh/*
     - cp -r dist/* repo-gh/
     - cd repo-gh
