@@ -13,7 +13,7 @@ const ContactMe = memo(function ContactMe() {
                     <input
                         type="hidden"
                         name="_next"
-                        value="https://mostafa10oulahyan.github.io/My-Portfolio/"
+                        value="https://moulahyan.tech"
                     />
                     <input type="hidden" name="_captcha" value="false" />
                     <input
