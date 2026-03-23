@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://mostafa10oulahyan.github.io/My-Portfolio/",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
