@@ -40,7 +40,7 @@ const ProfilePage = ({ onContactMe }) => {
             </p>
 
             <div className="btn-box">
-                <a href="resume/Mostafa_Oulahyan_Ev.pdf" download="Mostafa_Oulahyan.pdf" className="btn">
+                <a href="/resume/Mostafa_Oulahyan_Ev.pdf" download="Mostafa_Oulahyan.pdf" className="btn">
                     Download CV
                 </a>
                 <a href="#" className="btn contact-me" onClick={(e) => { e.preventDefault(); onContactMe(); }}>
