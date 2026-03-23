@@ -11,6 +11,12 @@ const ContactMe = memo(function ContactMe() {
                     method="POST"
                 >
                     <input
+                        type="hidden"
+                        name="_next"
+                        value="https://mostafa10oulahyan.github.io/My-Portfolio/"
+                    />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input
                         type="text"
                         name="name"
                         className="field"
