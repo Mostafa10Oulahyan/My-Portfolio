@@ -3,7 +3,7 @@ import TextType from './TextType';
 const ProfilePage = ({ onContactMe }) => {
     return (
         <div className="profile-page">
-            <img src="assets/a.png" alt="Mostafa Oulahyan" />
+            <img src="assets/p.jpg" alt="Mostafa Oulahyan" />
             <h1>Mostafa Oulahyan</h1>
             <TextType
                 as="h3"
