@@ -615,23 +615,31 @@ body {
 
 .portfolio-box .img-box {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 15rem;
-    border-radius: 0.5rem;
-    border: var(--border);
+    aspect-ratio: 16 / 9;
+    min-height: 13.5rem;
+    padding: 0.35rem;
+    border-radius: 0.7rem;
+    border: 0.125rem solid #fff;
+    background: #fff;
+    box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 .portfolio-box .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    border-radius: 0.45rem;
+    object-fit: cover;
     object-position: center;
-    transition: 0.5s ease;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    filter: saturate(1.02) contrast(1.03);
 }
 
 .portfolio-box .img-box:hover img {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .portfolio-box .info-box {
@@ -912,7 +920,7 @@ body {
     }
 
     .portfolio-box .img-box {
-        height: 12rem;
+        min-height: 11.5rem;
     }
 
     .portfolio-box .info-box .info-title {
